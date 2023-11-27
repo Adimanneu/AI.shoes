@@ -1,6 +1,6 @@
 function renderStructure() {
-    const container = document.querySelector("#wrapper");
-    container.innerHTML = `
+  const container = document.querySelector("#wrapper");
+  container.innerHTML = `
         <header>
         </header>
   
@@ -9,6 +9,7 @@ function renderStructure() {
         
         <main>
           <section id="top">
+            <div></div>
           </section>
   
           <section id="bottom">
@@ -16,11 +17,11 @@ function renderStructure() {
         </main>
       `;
 
-    return {
-        header: container.querySelector("header"),
-        nav: container.querySelector("nav"),
-        main: container.querySelector("main"),
-        top: container.querySelector("#top"),
-        bottom: container.querySelector("#bottom"),
-    };
+  return {
+    header: container.querySelector("header"),
+    nav: container.querySelector("nav"),
+    main: container.querySelector("main"),
+    top: container.querySelector("#top"),
+    bottom: container.querySelector("#bottom"),
+  };
 }
