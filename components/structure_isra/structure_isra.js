@@ -12,6 +12,15 @@ function render_structure ()
             <a>ABOUT US</a>
         </nav>
     </header>
+    <main>
+        <div id="top">
+            <h1><h1>
+            <p></p>
+        </div>
+        <div id="bottom">
+        </div>
+      
+    </main>
     
     <footer></footer>
   `;
