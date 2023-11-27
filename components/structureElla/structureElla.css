@@ -1,0 +1,17 @@
+main {
+    margin: 10px;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+
+#bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+}
