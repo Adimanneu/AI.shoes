@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    border-bottom: 1px solid black;
+}
+.corner {
+    flex-grow: 2;
+}
+
+#top {
+    margin: 40px;
+}
+
+#bottom {
+    margin: 40px 20px 40px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+}
+
+#img {
+    border: 1px solid black;
+}
