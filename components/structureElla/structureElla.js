@@ -3,11 +3,9 @@ function render_structure()
   const container = document.querySelector("body");
   container.innerHTML = `
     <nav></nav>
-    <main>
-      <section id="about"></section>
-      <section id="top"></section>
-      <section id="bottom"></section>
-    </main>
+    <section id="about"></section>
+    <section id="top"></section>
+    <section id="bottom"></section>
   `;
 
   return {
