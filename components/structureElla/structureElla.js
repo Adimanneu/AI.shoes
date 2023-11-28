@@ -1,11 +1,13 @@
 function render_structure()
 {
-  const container = document.querySelector("body");
+  const container = document.querySelector("#wrapper");
   container.innerHTML = `
     <nav></nav>
-    <section id="about"></section>
-    <section id="top"></section>
-    <section id="bottom"></section>
+    <main>
+      <section id="about"></section>
+      <section id="top"></section>
+      <section id="bottom"></section>
+    </main>
   `;
 
   return {
