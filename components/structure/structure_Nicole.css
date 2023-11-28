@@ -13,11 +13,6 @@ nav {
     flex-basis: 0;
 }
 
-nav>p {
-    font-size: 24px;
-    padding: 10px 20px;
-}
-
 #bottom {
     display: grid;
     /* 3 skor på display per rad */
@@ -26,14 +21,4 @@ nav>p {
     grid-auto-rows: 500px;
     /* mellanrum mellan listorna på skorna */
     gap: 20px;
-}
-
-#top>h1 {
-    font-size: 64px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-#top>p {
-    font-size: 20px;
 }
