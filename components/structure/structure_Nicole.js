@@ -2,22 +2,10 @@ function renderStructure() {
   const container = document.querySelector("#wrapper");
   container.innerHTML = `
       <header></header>
-
-      <nav>
-        <p>ALL</p>
-        <p>BOOTS</p>
-        <p>SNEAKERS</p>
-        <p>TOFFLOR</p>
-        <p>ABOUT US</p>
-      </nav>
-      
+      <nav></nav>
       <main>
-        <section id="top">
-          <h1></h1>
-          <p></p>
-        </section>
-
-        <section id="bottom"></section>
+        <div id="top"></div>
+        <div id="bottom"></div>
       </main>
     `;
 
