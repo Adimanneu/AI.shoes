@@ -9,7 +9,7 @@ const SHOES = [
     { "id": 8, "name": "Black Chelsea", "price": 489, "kind_id": 2, "country_id": 4, "file_name": "black_chelsea_boots.jpg" },
 ];
 
-
+/*
 function hilda_filter(shoe_array, x, y) {
     let new_array = [];
 
@@ -21,4 +21,18 @@ function hilda_filter(shoe_array, x, y) {
     return new_array;
 };
 
+console.log(hilda_filer(SHOES, 500, 1000));
+*/
+
+
+function hilda_filer(shoe_array, x, y) {
+    let ny_array = [];
+
+    for (let i = 0; i < shoe_array.length; i++) {
+        if (shoe_array[i].price >= x && shoe_array[i].price <= y) {
+            ny_array.push(shoe_array[i]);
+        }
+    }
+    return ny_array;
+}
 console.log(hilda_filer(SHOES, 500, 1000));
