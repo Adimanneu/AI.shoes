@@ -13,12 +13,9 @@ nav {
     flex-basis: 0;
 }
 
-#bottom {
+/* #bottom {
     display: grid;
-    /* 3 skor på display per rad */
     grid-template-columns: repeat(3, 1fr);
-    /* varje row ska vara 500px (ungefär?) */
     grid-auto-rows: 500px;
-    /* mellanrum mellan listorna på skorna */
     gap: 20px;
-}
+} */

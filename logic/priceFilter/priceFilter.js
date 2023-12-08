@@ -1,6 +1,6 @@
 "use strict";
 
-function nicoleFilter(arrayOfShoes, minPrice, maxPrice) {
+function priceFilter(arrayOfShoes, minPrice, maxPrice) {
     // Skapar en ny array där skorna som uppfyller villkoren kommer att hamna
     let filteredArray = [];
     // Loopar igenom alla skor
