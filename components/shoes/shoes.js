@@ -6,8 +6,8 @@ function renderShoes(parent, shoe) {
     parent.append(container);
 
     // const shoe = array_find(SHOES, function (x) { return x.id === shoe.universityID; });
-    const countryOfProduction = array_find(COUNTRIES, function (x) { return x.id === shoe.country_id; });
-    const kindOfShoe = array_find(KINDS, function (x) { return x.id === shoe.kind_id; });
+    const countryOfProduction = arrayFind(COUNTRIES, function (x) { return x.id === shoe.country_id; });
+    const kindOfShoe = arrayFind(KINDS, function (x) { return x.id === shoe.kind_id; });
 
     const imagePath = shoe.file_name;
 
@@ -20,6 +20,4 @@ function renderShoes(parent, shoe) {
         <div class="countryOfProduction">MADE IN ${countryOfProduction.name.toUpperCase()}</div >
       </div >
     `;
-
-    // container.style.backgroundImage = `url(media/skobilder/${imagePath})`;
 }
