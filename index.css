@@ -1,7 +1,14 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/inter/static/Inter-Regular.ttf");
+}
 
-    margin-top: 40px;
+@font-face {
+    font-family: "Inter_bold";
+    src: url("fonts/inter/static/Inter-Bold.ttf");
+}
+
+body {
+    margin: 50px;
+    font-family: "Inter";
 }
