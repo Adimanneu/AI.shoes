@@ -39,5 +39,4 @@ function updateShoeList(shoes) {
         /* Kommer denna att behövas? */
         // sortShoeList();
     }
-
 }
