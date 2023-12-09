@@ -10,3 +10,14 @@ function arrayFind(array, findFunction) {
         }
     }
 }
+
+function array_filter(array, filterFunction) {
+    let temp = [];
+
+    for (let element of array) {
+        if (filterFunction(element)) {
+            temp.push(element);
+        }
+    }
+    return temp;
+}
