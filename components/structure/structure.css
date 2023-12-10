@@ -1,0 +1,21 @@
+main {
+    margin: 40px;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    /* göra knapparna lika långa i navbaren */
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+/* #bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 500px;
+    gap: 20px;
+} */

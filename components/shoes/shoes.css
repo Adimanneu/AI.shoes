@@ -1,0 +1,40 @@
+h1 {
+    font-family: "Inter_bold";
+    height: 50px;
+    font-size: 26px;
+}
+
+img {
+    width: 275px;
+    border: 1px solid #a4a4a4;
+    object-position: center;
+}
+
+ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.shoe {
+    border: 1px solid black;
+    display: flex;
+}
+
+.shoe>div {
+    padding: 30px;
+}
+
+.shoe>div>div {
+    font-size: 22px;
+}
+
+.kindOfShoe,
+.countryOfProduction {
+    border: 1px solid black;
+    margin: 15px 0;
+    margin-bottom: 0;
+    padding: 15px;
+}

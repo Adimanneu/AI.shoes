@@ -1,2 +1,3 @@
-let parent = document.body;
-renderButton(parent);
+const structureContainers = renderStructure();
+
+renderShoeList(structureContainers.bottom, SHOES);
