@@ -26,30 +26,28 @@ function render_header(parent) {
 };
 
 function f1(event) {
-    let content = event.originalTarget.textContent;
-    console.log(content);
-
     let n = document.querySelector("nav");
     n.innerHTML = `
-    <h1>BOOTS</h1>
-    <p>lorem ipsum djsbgfskjf jd nfksn</p>
+    <h1 class="shoe_rubrik">BOOTS</h1>
+    <p class="info_shoe">
+    Explore our impressive collection of boots - the ultimate fusion of style and functionality. Our boots are designed to take you through every season and occasion, from rugged and durable work boots to trendy and elegant city styles. Crafted with premium materials and meticulous craftsmanship, our boots offer you both comfort and lasting style. Whether you prefer classic leather, modern textures, or sporty details, we have a wide selection to suit your personal taste. From adventures in nature to urban escapades, our boots will take you there in style.
+    </p>
     `;
 }
-
 
 function f2(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
-    <h1>SNEAKERS</h1>
-    <p>lorem ipsum djsbgfskjf jd nfksn</p>
+    <h1 class="shoe_rubrik">SNEAKERS</h1>
+    <p class="info_shoe">Discover our fantastic range of sneakers - a perfect blend of comfort and trend. Our sneakers are crafted to fit every style and occasion, from casual everyday adventures to sporty performances. With high-quality materials and modern design, our sneakers offer both style and support for your feet. Whether you prefer classic colors or dare to go bold with patterns and details, we have a broad range to match your personal taste. Step forward in style and comfort with our sneakers, whether you're taking a stroll around the block or embracing new challenges on the go.</p>
     `;
 }
 
 function f3(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
-    <h1>SLIPPERS</h1>
-    <p>lorem ipsum djsbgfskjf jd nfksn</p>
+    <h1 class="shoe_rubrik">SLIPPERS</h1>
+    <p class="info_shoe">Welcome to our collection of slippers - your perfect companions for relaxation and comfort. Our slippers are created to give your feet a haven of comfort after a long day. Made with soft materials and ergonomic design, our slippers provide a sense of luxury and respite for your tired feet. Whether you prefer warm and fluffy options for winter or cool and airy for summer, we offer a wide selection that caters to your preferences and needs. Relax at home in style and enjoy every step you take in our comfortable and stylish slippers.</p>
     `;
 }
 
@@ -57,7 +55,6 @@ function f4(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
     <h1>ALL</h1>
-    <p>lorem ipsum djsbgfskjf jd nfksn</p>
     `;
 }
 
@@ -65,7 +62,6 @@ function f5(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
     <h1>ABOUT US</h1>
-    <p>lorem ipsum djsbgfskjf jd nfksn</p>
     `;
 }
 
