@@ -1,6 +1,6 @@
 function render_header(parent) {
     parent.innerHTML = `
-        <div class="h_class rubrik">AI.Shoes</div>
+        <div class="h_class rubrik">AI.shoes</div>
         <div class="h_class all">ALL</div>
         <div class="h_class boots">BOOTS</div>
         <div class="h_class sneakers">SNEAKERS</div>
