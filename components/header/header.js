@@ -54,7 +54,7 @@ function f3(event) {
 function f4(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
-    <h1>ALL</h1>
+    <h1 class="shoe_rubrik">ALL</h1>
     `;
 }
 
@@ -64,4 +64,6 @@ function f5(event) {
     <h1>ABOUT US</h1>
     `;
 }
+
+
 
