@@ -35,8 +35,5 @@ function updateShoeList(shoes) {
         for (let shoe of shoes) {
             renderShoes(listDom, shoe);
         }
-
-        /* Kommer denna att behövas? */
-        // sortShoeList();
     }
 }
