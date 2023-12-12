@@ -23,12 +23,14 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 10px 200px;
 }
 
 .rubrik {
     font-weight: bolder;
     grid-column: 1;
+
+    cursor: not-allowed;
 }
 
 .all {
@@ -58,4 +60,68 @@ nav {
 
 .info_shoe {
     margin: 30px 0;
+}
+
+
+/* Css för About Us pop-up */
+.about_popup {
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.about_popup_container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+
+    width: 70vw;
+    height: 70vh;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.about_popup_image {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.about_popup_closebutton {
+    cursor: pointer;
+    font-size: 32px;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.about_textcontent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-left: 100px;
+}
+
+.popup_h1 {
+    margin: 0;
 }
