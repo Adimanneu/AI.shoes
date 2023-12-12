@@ -1,0 +1,11 @@
+.navType {
+    text-transform: uppercase;
+}
+
+.navType:hover {
+    cursor: pointer;
+}
+
+.current {
+    border-bottom: 1px solid black;
+}
