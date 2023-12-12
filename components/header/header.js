@@ -119,7 +119,7 @@ function f5(event) {
     }
 }
 
-function f6(event) {
+function f6() {
     let n = document.querySelector(".about_popup");
     n.remove();
 }

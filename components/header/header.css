@@ -23,7 +23,7 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    margin: 10px 200px;
+    margin: 10px 90px;
 }
 
 .rubrik {
@@ -31,6 +31,7 @@ nav {
     grid-column: 1;
 
     cursor: not-allowed;
+    font-family: "Inter_bold";
 }
 
 .all {
