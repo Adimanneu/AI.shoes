@@ -61,9 +61,27 @@ function f4(event) {
 function f5(event) {
     let n = document.querySelector("nav");
     n.innerHTML = `
-    <h1>ABOUT US</h1>
+    <div class="about_popup">
+        <div class="about_popup_container">
+            <div class="about_popup_closebutton">X</div>
+            <img src="media/images_aboutus/niagara.jpg" alt="Malmö Universitet" class="about_popup_image">
+            <div class="about_textcontent">
+                <h1 class="popup_h1">Malmö Universitet</h1>
+                <h3 class="popup_h3">Webbaserad design & Utveckling</h3>
+                <h4 class="popup_h4">JAVASCRIPT - DU2</h4>
+            </div>
+        </div>
+    </div>
     `;
+
+    document.body.appendChild(n);
+
+    let closeButton = n.querySelector(".about_popup_closebutton");
+    closeButton.addEventListener("click", f6);
 }
 
-
+function f6(event) {
+    let n = document.querySelector(".about_popup");
+    n.remove();
+}
 
