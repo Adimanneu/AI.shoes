@@ -5,9 +5,8 @@ body {
 header {
     border-bottom: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
-    gap: 10px;
 }
 
 .h_class {
@@ -17,16 +16,38 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.rubrik {
-    font-weight: bolder;
+    box-sizing: border-box;
 }
 
 nav {
     display: flex;
     flex-direction: column;
     margin: 50px;
+}
+
+.rubrik {
+    font-weight: bolder;
+    grid-column: 1;
+}
+
+.all {
+    grid-column: 3;
+}
+
+.boots {
+    grid-column: 4;
+}
+
+.sneakers {
+    grid-column: 5;
+}
+
+.slippers {
+    grid-column: 6;
+}
+
+.about {
+    grid-column: 8;
 }
 
 .shoe_rubrik {
