@@ -125,3 +125,15 @@ nav {
 .popup_h1 {
     margin: 0;
 }
+
+.selected {
+    text-decoration: underline;
+
+    cursor: pointer;
+    font-size: 3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
