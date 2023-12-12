@@ -108,8 +108,6 @@ function f5(event) {
     </div>
     `;
 
-    document.body.appendChild(n);
-
     let closeButton = n.querySelector(".about_popup_closebutton");
     closeButton.addEventListener("click", f6);
 
