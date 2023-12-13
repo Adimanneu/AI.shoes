@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // the average of the reviews
   function calculateAverageRating(reviews) {
     const totalScores = reviews.reduce((sum, review) => sum + review.score, 0);
-    const averageRating = totalScores / (reviews.length || 1); // Avoid division by zero
+    const averageRating = totalScores / (reviews.length || 1); 
     return isNaN(averageRating) ? 0 : averageRating;
   }
 
