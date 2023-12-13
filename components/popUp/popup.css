@@ -1,3 +1,4 @@
+
 .shoe {
     cursor: pointer;
 }
@@ -22,8 +23,9 @@
     transform: translate(-50%, -50%);
 
     width: 70vw;
-    height: 70vh;
-
+    height: 70vh;  
+    
+    overflow-y: scroll;
     background-color: white;
     padding: 40px;
     border-radius: 5px;
@@ -68,3 +70,56 @@
     cursor: pointer;
     font-size: 32px;
 }
+
+
+#reviews{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#reviewh1{
+   margin:0;
+}
+
+#comment{
+    max-height: 200px; /* Adjust the maximum height based on your design */
+    
+}
+#stars{
+    width: 170px;
+  font-family: "Inter_bold";
+      
+}
+
+.star{
+    background-color: unset;
+    border: none;
+    font-size: 1.1rem;
+}
+.comment{
+    margin-top: 2rem;
+    display: flex;
+    gap:3vw;
+    font-family: "Inter";
+}
+
+.filled-star {
+    color: black; /* Adjust color for filled stars */
+  }
+  
+  .empty-star {
+    color: #ccc; /* Adjust color for empty stars */
+  }
+
+  .review-content{
+    width: 500px;
+    font-size: 0.9rem;
+  }
+
+  .review-content p{
+    margin: 0;
+  }
+  .review-info{
+    font-size: 0.9rem;
+    margin-left: 3rem;
+  }
