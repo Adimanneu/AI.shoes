@@ -34,7 +34,7 @@
 .content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 30px;
 }
 
@@ -71,24 +71,19 @@
     font-size: 32px;
 }
 
-
 #reviews{
-    width: 100%;
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
 }
 
 #reviewh1{
-   margin:0;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgb(169, 169, 169);
 }
 
-#comment{
-    max-height: 200px; /* Adjust the maximum height based on your design */
-    
-}
 #stars{
     width: 170px;
-  font-family: "Inter_bold";
-      
+    font-family: "Inter_bold";
 }
 
 .star{
@@ -97,7 +92,7 @@
     font-size: 1.1rem;
 }
 .comment{
-    margin-top: 2rem;
+    margin: 40px 0 40px 0;
     display: flex;
     gap:3vw;
     font-family: "Inter";

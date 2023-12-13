@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
           
           <div id="reviews">
             <div>
-              <h2 id="reviewh1">Reviews </h2>
+              <h2 id="reviewh1">REVIEWS</h2>
               <div id="stars">
                 ${renderStarRatings(averageRating)} (${foundReview.length})
               </div>
