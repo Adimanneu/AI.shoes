@@ -14,7 +14,6 @@ function renderNavShoeKinds(parent, types) {
 
     // När man trycker på texten "ALL" anropas funktioner som uppdaterar  sko listan
     textAll.addEventListener("click", function (event) {
-        console.log(event.target.id);
         updateShoeList(SHOES);
     });;
 
@@ -34,7 +33,6 @@ function renderNavShoeKinds(parent, types) {
                 let clickedShoeArray = array_filter(SHOES, function (obj) {
                     return obj.kind_id == event.target.id;
                 });
-                console.log(event.target.id);
                 updateShoeList(clickedShoeArray);
             });
         } else {
@@ -53,7 +51,6 @@ function renderNavShoeKinds(parent, types) {
                 let clickedShoeArray = array_filter(SHOES, function (obj) {
                     return obj.kind_id == event.target.id;
                 });
-                console.log(event.target.id);
                 updateShoeList(clickedShoeArray);
             });
         }
