@@ -12,7 +12,7 @@ function renderNavShoeKinds(parent, types) {
     // Lägger till den i navbaren
     parent.appendChild(textAll);
 
-    // När man trycker på texten "ALL" anropas funktioner som uppdaterar  sko listan
+    // När man trycker på texten "ALL" anropas funktioner som uppdaterar sko listan
     textAll.addEventListener("click", function (event) {
         updateShoeList(SHOES);
     });;
@@ -47,10 +47,12 @@ function renderNavShoeKinds(parent, types) {
             parent.appendChild(text);
 
             text.addEventListener("click", function (event) {
-                // Update shoelist
+                // Skapar en ny array med skor som endast är den typen användaren klickar på
                 let clickedShoeArray = array_filter(SHOES, function (obj) {
+                    // Event.target.id är id:et från den diven(typen) användaren tryckte på
                     return obj.kind_id == event.target.id;
                 });
+                // Anropar funktionen som uppdaterar listan
                 updateShoeList(clickedShoeArray);
             });
         }
