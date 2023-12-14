@@ -1,26 +1,61 @@
 function renderNavShoeKinds(parent, types) {
 
-    const textAll = document.createElement("h2");
-    textAll.classList.add("navType");
-    textAll.classList.add("current");
-    textAll.innerText = "All";
+    // Skapar en div med texten "ALL"
+    const textAll = document.createElement("div");
+    textAll.innerText = "ALL";
+
+    // Ger den klasserna "all" & "h_class"
+    textAll.classList.add("all");
+    textAll.classList.add("h_class");
     textAll.id = "0";
+
+    // Lägger till den i navbaren
     parent.appendChild(textAll);
 
-    textAll.addEventListener("click", function () {
-        // Update shoelist
+    // När man trycker på texten "ALL" anropas funktioner som uppdaterar  sko listan
+    textAll.addEventListener("click", function (event) {
+        console.log(event.target.id);
+        updateShoeList(SHOES);
     });;
 
     for (let type of types) {
-        const text = document.createElement("h2");
-        text.classList.add("navType");
-        text.innerText = type.name;
-        text.id = type.id;
-        parent.appendChild(text);
+        // I databasen heter slippers tofflor
+        if (type.name == "Tofflor") {
+            const text = document.createElement("div");
+            text.innerText = "SLIPPERS";
 
-        text.addEventListener("click", function () {
-            // Update shoelist
-        });
+            text.classList.add("h_class");
+            text.classList.add("slippers");
+            text.id = type.id;
 
+            parent.appendChild(text);
+
+            text.addEventListener("click", function (event) {
+                let clickedShoeArray = array_filter(SHOES, function (obj) {
+                    return obj.kind_id == event.target.id;
+                });
+                console.log(event.target.id);
+                updateShoeList(clickedShoeArray);
+            });
+        } else {
+            const text = document.createElement("div");
+            text.innerText = type.name.toUpperCase();
+
+
+            text.classList.add("h_class");
+            text.classList.add(type.name.toLowerCase());
+            text.id = type.id;
+
+            parent.appendChild(text);
+
+            text.addEventListener("click", function (event) {
+                // Update shoelist
+                let clickedShoeArray = array_filter(SHOES, function (obj) {
+                    return obj.kind_id == event.target.id;
+                });
+                console.log(event.target.id);
+                updateShoeList(clickedShoeArray);
+            });
+        }
     }
 }

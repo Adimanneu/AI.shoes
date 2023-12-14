@@ -1,12 +1,27 @@
 function render_header(parent) {
-    parent.innerHTML = `
-        <div class="h_class rubrik">AI.shoes</div>
-        <div class="h_class all">ALL</div>
-        <div class="h_class boots">BOOTS</div>
-        <div class="h_class sneakers">SNEAKERS</div>
-        <div class="h_class slippers">SLIPPERS</div>
-        <div class="h_class about">ABOUT US</div>
-    `;
+
+    const header = document.createElement("div");
+    header.textContent = "AI.shoes";
+    header.classList.add("h_class");
+    header.classList.add("rubrik");
+    parent.appendChild(header);
+
+    renderNavShoeKinds(parent, KINDS);
+
+    const aboutUs = document.createElement("div");
+    aboutUs.textContent = "About Us";
+    aboutUs.classList.add("h_class");
+    aboutUs.classList.add("about");
+    parent.appendChild(aboutUs);
+
+    // parent.innerHTML = `
+    //     <div class="h_class rubrik">AI.shoes</div>
+    //     <div class="h_class all">ALL</div>
+    //     <div class="h_class boots">BOOTS</div>
+    //     <div class="h_class sneakers">SNEAKERS</div>
+    //     <div class="h_class slippers">SLIPPERS</div>
+    //     <div class="h_class about">ABOUT US</div>
+    // `;
 
     let boots_click = document.querySelector(".boots");
     boots_click.addEventListener("click", f1);

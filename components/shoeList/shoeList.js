@@ -16,6 +16,7 @@ function renderShoeList(parent, shoes) {
 }
 
 function updateShoeList(shoes) {
+    console.log(shoes);
     const container = document.querySelector("#shoeList");
     const listDom = container.querySelector("ol");
     const feedbackDom = container.querySelector(".feedback");
