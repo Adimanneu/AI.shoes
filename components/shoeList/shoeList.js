@@ -20,6 +20,8 @@ function updateShoeList(shoes) {
     const listDom = container.querySelector("ol");
     const feedbackDom = container.querySelector(".feedback");
 
+    listDom.innerHTML = "";
+
     /* Filtrerar skorna, ska finnas i logic > filter.js */
     // const shoes = filterShoes();
 
