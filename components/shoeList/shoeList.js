@@ -20,6 +20,8 @@ function updateShoeList(shoes) {
     const listDom = container.querySelector("ol");
     const feedbackDom = container.querySelector(".feedback");
 
+    listDom.innerHTML = "";
+
     /* Filtrerar skorna, ska finnas i logic > filter.js */
     // const shoes = filterShoes();
 
@@ -35,8 +37,5 @@ function updateShoeList(shoes) {
         for (let shoe of shoes) {
             renderShoes(listDom, shoe);
         }
-
-        /* Kommer denna att behövas? */
-        // sortShoeList();
     }
 }
