@@ -24,7 +24,7 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    margin: 10px 200px;
+    margin: 10px 90px;
 }
 
 .rubrik {
@@ -32,6 +32,7 @@ nav {
     grid-column: 1;
 
     cursor: not-allowed;
+    font-family: "Inter_bold";
 }
 
 .all {
@@ -125,4 +126,16 @@ nav {
 
 .popup_h1 {
     margin: 0;
+}
+
+.selected {
+    text-decoration: underline;
+
+    cursor: pointer;
+    font-size: 3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
