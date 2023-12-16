@@ -109,6 +109,6 @@ function renderStarRatings(score) {
     });
   }
 
-  addClickEventToShoes();
+  // addClickEventToShoes();
 
 });

@@ -31,13 +31,13 @@ function renderShoes(parent, shoe) {
       const imagePath = shoe.file_name;
 
     //Reviews
-    const foundReview = REVIEWS.filter((obj) => obj.shoe_id === xyz.id);
+    const foundReview = REVIEWS.filter((obj) => obj.shoe_id === shoe.id);
 
     // declare to calculate the average of the reviews
     const averageRating = calculateAverageRating(foundReview);
     
-    console.log(KINDS);
-    console.log(kindOfShoe);
+    // console.log(KINDS);
+    // console.log(kindOfShoe);
 
     const popup = document.createElement("div");
     popup.innerHTML = `
