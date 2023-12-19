@@ -26,6 +26,8 @@
     height: 70vh;  
     
     overflow-y: scroll;
+    scrollbar-width: thin;
+    
     background-color: white;
     padding: 40px;
     border-radius: 5px;
