@@ -32,6 +32,7 @@ function renderShoes(parent, shoe) {
 
     //Reviews
     const foundReview = REVIEWS.filter((obj) => obj.shoe_id === shoe.id);
+    const foundSize = INVENTORY.filter((obj) => obj.shoe_id === shoe.id);
 
     // declare to calculate the average of the reviews
     const averageRating = calculateAverageRating(foundReview);
@@ -43,7 +44,7 @@ function renderShoes(parent, shoe) {
     popup.innerHTML = `
       <div id="popup">
         <div class="popupContainer">
-          <div id="closeButton">X</div>
+          <div id="closeButton">x</div>
           <div class="content">
             <img src="media/skobilder/${imagePath}" alt="Shoes">
             <div>
@@ -52,6 +53,13 @@ function renderShoes(parent, shoe) {
               <div class="productdetails">
                 <div class="kindOfShoe">${kindOfShoe.name.toUpperCase()}</div>
                 <div class="countryOfProduction">MADE IN ${countryOfProduction.name.toUpperCase()}</div>
+              </div>
+              <div>
+                <h2>SIZES</h2>
+              </div>
+              <div class="sizes">${rendersize (foundSize)}</div>
+              <div class="addtocard">
+                <p>ADD TO CARD</p>
               </div>
             </div>           
           </div>
@@ -78,8 +86,42 @@ function renderShoes(parent, shoe) {
     closeButton.addEventListener('click', function() {
       popup.remove();
     });
+
+    //choose the size and change the background color
+    const sizeBoxes = document.querySelectorAll(".size-box");
+
+    sizeBoxes.forEach(function(sizeBox) {
+      sizeBox.addEventListener('click', function() {
+
+        sizeBoxes.forEach(function(box) {
+
+          box.classList.remove("change");
+        });
+
+        sizeBox.classList.add("change");
+      });
+    });
+
   })
 
+/*sizes*/
+ //show up the list of the shoes sizes
+  function rendersize(inventory) {
+    const sizesHTML = inventory.map((inventoryItem) => {
+      const isAvailable = inventoryItem.n_shoes > 0;
+      const sizeClass = isAvailable ? '' : 'unavailable-size';
+      const sizeContent = isAvailable ? inventoryItem.size : `<div class="unavailable-x"></div>${inventoryItem.size}`;
+      return `
+        <div class="size-box ${sizeClass}" >
+          <p class"choose">${sizeContent}</p>
+        </div>
+      `;
+    }).join('');
+  
+    return sizesHTML;
+  }
+
+//show the comment on the shoes
 function renderComments(reviews) {
   return reviews.map((review) => `
     <div class="comment">
@@ -111,3 +153,4 @@ function renderStarRatings(score) {
   }).join("");
     }
 }
+
