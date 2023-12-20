@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   buttonContainer.classList.add('filter-container');
   buttonContainer.appendChild(filterButton);
 
-  const header = document.querySelector('header');
+  const header = document.querySelector('nav');
   if (header) {
     header.parentNode.insertBefore(buttonContainer, header.nextSibling);
   }
@@ -25,20 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="filter-content-types">
           <div>
             <h3> Types of Shoes</h3>
-            <span><input type="checkbox">Boots </span>
-            <span><input type="checkbox">Sneakers </span>
-            <span><input type="checkbox">Tofflor </span>
+            <label for="Boots"><input id="Boots" class="input-box" type="checkbox">Boots </label>
+            <label for="Sneakers"><input id="Sneakers" class="input-box" type="checkbox">Sneakers </label><br>
+            <label for="Tofflor"><input id="Tofflor" class="input-box" type="checkbox">Tofflor </label>
           </div>
           <div>
             <h3> Max price </h3>
-            <p> Up to: <input type="number"> KR </p>
+            <p> Up to: <input type="text" class="input-price"> KR </p>
           </div>
           <div>
             <h3> Made In</h3>
-            <span><input type="checkbox">Spain </span>
-            <span><input type="checkbox">Portugal </span>
-            <span><input type="checkbox">United Kingdom </span>
-            <span><input type="checkbox">Sweden </span>
+            <label for="Spain"><input id="Spain" class="input-box" type="checkbox">Spain </label>
+            <label for="Portugal"><input id="Portugal" class="input-box" type="checkbox"> Portugal </label><br>
+            <label for="Kingdom"><input id="Kingdom" class="input-box" type="checkbox">United Kingdom </label><br>
+            <label for="Sweden"><input id="Sweden" class="input-box" type="checkbox">Sweden </label>
           </div>
         </div>
     `;
