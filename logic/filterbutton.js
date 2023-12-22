@@ -62,31 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const maxPrice = parseFloat(maxPriceInput.value);
 
     if (!isNaN(maxPrice)) {
-      const selectedTypes = getSelectedCheckboxes('.type-checkbox');
-      const selectedCountries = getSelectedCheckboxes('.country-checkbox');
-
-      const filteredShoes = filterShoes(SHOES, selectedTypes, 0, maxPrice, selectedCountries);
+      const filteredShoes = filterShoes(SHOES, maxPrice);
       displayShoes(filteredShoes);
     }
 
     filterPopup.style.display = 'none';
   });
 
-  function getSelectedCheckboxes(selector) {
-    const checkboxes = document.querySelectorAll(selector);
-    const selectedValues = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.id);
-    return selectedValues;
-  }
-
-  function filterShoes(arrayOfShoes, selectedTypes, minPrice, maxPrice, selectedCountries) {
+  function filterShoes(arrayOfShoes, maxPrice) {
     return arrayOfShoes.filter(shoe => {
-      const meetsTypeCriteria = selectedTypes.length === 0 || selectedTypes.includes(shoe.kind_id.toString());
-      const meetsPriceCriteria = shoe.price >= minPrice && shoe.price <= maxPrice;
-      const meetsCountryCriteria = selectedCountries.length === 0 || selectedCountries.includes(shoe.country_id.toString());
-
-      return meetsTypeCriteria && meetsPriceCriteria && meetsCountryCriteria;
+      return shoe.price <= maxPrice;
     });
   }
 
