@@ -54,13 +54,6 @@ function renderShoes(parent, shoe) {
                 <div class="kindOfShoe">${kindOfShoe.name.toUpperCase()}</div>
                 <div class="countryOfProduction">MADE IN ${countryOfProduction.name.toUpperCase()}</div>
               </div>
-              <div>
-                <h2>SIZES</h2>
-              </div>
-              <div class="sizes">${rendersize (foundSize)}</div>
-              <div class="addtocard">
-                <p>ADD TO CARD</p>
-              </div>
             </div>           
           </div>
         
@@ -87,39 +80,10 @@ function renderShoes(parent, shoe) {
       popup.remove();
     });
 
-    //choose the size and change the background color
-    const sizeBoxes = document.querySelectorAll(".size-box");
 
-    sizeBoxes.forEach(function(sizeBox) {
-      sizeBox.addEventListener('click', function() {
-
-        sizeBoxes.forEach(function(box) {
-
-          box.classList.remove("change");
-        });
-
-        sizeBox.classList.add("change");
-      });
-    });
 
   })
 
-/*sizes*/
- //show up the list of the shoes sizes
-  function rendersize(inventory) {
-    const sizesHTML = inventory.map((inventoryItem) => {
-      const isAvailable = inventoryItem.n_shoes > 0;
-      const sizeClass = isAvailable ? '' : 'unavailable-size';
-      const sizeContent = isAvailable ? inventoryItem.size : `<div class="unavailable-x"></div>${inventoryItem.size}`;
-      return `
-        <div class="size-box ${sizeClass}" >
-          <p class"choose">${sizeContent}</p>
-        </div>
-      `;
-    }).join('');
-  
-    return sizesHTML;
-  }
 
 //show the comment on the shoes
 function renderComments(reviews) {
