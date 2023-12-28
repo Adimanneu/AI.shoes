@@ -28,11 +28,9 @@ function renderShoes(parent, shoe) {
         return isNaN(averageRating) ? 0 : averageRating;
       }
 
-      const imagePath = shoe.file_name;
 
     //Reviews
     const foundReview = REVIEWS.filter((obj) => obj.shoe_id === shoe.id);
-    const foundSize = INVENTORY.filter((obj) => obj.shoe_id === shoe.id);
 
     // declare to calculate the average of the reviews
     const averageRating = calculateAverageRating(foundReview);
