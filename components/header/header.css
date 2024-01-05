@@ -121,7 +121,8 @@ nav {
     justify-content: center;
     flex-direction: column;
 
-    margin-left: 100px;
+    margin-left: 70px;
+    text-align: center;
 }
 
 .popup_h1 {
