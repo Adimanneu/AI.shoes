@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <label for="Kingdom"><input id="Kingdom" class="input-box" type="checkbox">United Kingdom </label><br>
             <label for="Sweden"><input id="Sweden" class="input-box" type="checkbox">Sweden </label>
           </div>
-        </div>
-    `;
+          <button class="apply-filter-button">Apply Filter</button>
+          </div>
+        `;
 
   document.body.appendChild(filterPopup);
 
@@ -53,6 +54,31 @@ document.addEventListener('DOMContentLoaded', function () {
   closeButton.addEventListener('click', function () {
     filterPopup.style.display = 'none';
   });
+
+  const applyFilterButton = filterPopup.querySelector('.apply-filter-button');
+  applyFilterButton.addEventListener('click', function () {
+    const maxPriceInput = document.querySelector('.input-price');
+    const maxPrice = parseFloat(maxPriceInput.value);
+
+    if (!isNaN(maxPrice)) {
+      const filteredShoes = filterShoes(SHOES, maxPrice);
+      displayShoes(filteredShoes);
+    }
+
+    filterPopup.style.display = 'none';
+  });
+
+  function filterShoes(arrayOfShoes, maxPrice) {
+    return arrayOfShoes.filter(shoe => {
+      return shoe.price <= maxPrice;
+    });
+  }
+
+  function displayShoes(shoes) {
+    const structureContainers = renderStructure();
+    const shoeListContainer = structureContainers.bottom;
+    render_header(structureContainers.header);
+    renderShoeList(shoeListContainer, shoes);
+  }
+
 });
-
-
