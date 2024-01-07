@@ -24,8 +24,8 @@ function renderShoes(parent, shoe) {
     container.addEventListener("click", function () {
       
     //Reviews
-    const foundReview = REVIEWS.filter((obj) => obj.shoe_id === shoe.id);
-
+    const foundReview = array_filter(REVIEWS, function(obj){ return obj.shoe_id === shoe.id});
+    
     const allScores = foundReview.map((review) => review.score);
 
     // declare to calculate the average of the reviews
