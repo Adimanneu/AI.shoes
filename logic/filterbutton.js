@@ -25,9 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="filter-content-types">
           <div>
             <h3> Types of Shoes</h3>
-            <label for="Boots"><input id="Boots" class="input-box" type="checkbox">Boots </label>
-            <label for="Sneakers"><input id="Sneakers" class="input-box" type="checkbox">Sneakers </label><br>
-            <label for="Tofflor"><input id="Tofflor" class="input-box" type="checkbox">Tofflor </label>
+            <input type="checkbox" id="bootsCheckbox" class="input-box" name="Boots">
+            <label for="Boots">BOOTS</label>
+            <input type="checkbox" id="sneakersCheckbox" class="input-box" name="Sneakers">
+            <label for="Sneakers">SNEAKERS</label>
+            <input type="checkbox" id="slippersCheckbox" class="input-box" name="Slippers">
+            <label for="Slippers">SLIPPERS</label>
           </div>
           <div>
             <h3> Max price </h3>
