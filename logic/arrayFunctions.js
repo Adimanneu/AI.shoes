@@ -21,3 +21,12 @@ function array_filter(array, filterFunction) {
     }
     return temp;
 }
+
+
+function array_average (a) {
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+      sum += a[i];
+    }
+    return ("" + (sum/a.length)).substring(0, 4);
+  }

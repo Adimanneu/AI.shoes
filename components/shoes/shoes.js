@@ -22,18 +22,14 @@ function renderShoes(parent, shoe) {
     `;
 
     container.addEventListener("click", function () {
-      function calculateAverageRating(reviews) {
-        const totalScores = reviews.reduce((sum, review) => sum + review.score, 0);
-        const averageRating = totalScores / (reviews.length || 1); 
-        return isNaN(averageRating) ? 0 : averageRating;
-      }
-
-
+      
     //Reviews
     const foundReview = REVIEWS.filter((obj) => obj.shoe_id === shoe.id);
 
+    const allScores = foundReview.map((review) => review.score);
+
     // declare to calculate the average of the reviews
-    const averageRating = calculateAverageRating(foundReview);
+    const averageRating = array_average(allScores);
     
     // console.log(KINDS);
     // console.log(kindOfShoe);
@@ -77,9 +73,6 @@ function renderShoes(parent, shoe) {
     closeButton.addEventListener('click', function() {
       popup.remove();
     });
-
-
-
   })
 
 
@@ -103,16 +96,17 @@ function renderComments(reviews) {
   `).join("");
 }
 
-
 function renderStarRatings(score) {
   const totalStars = 5;
-  const filledStars = Math.round(score);
+  const filledStars = Math.min(Math.max(score, 0), totalStars);
 
-  return Array.from({ length: totalStars }, (_, index) => {
-    const isFilled = index < filledStars;
-    const starStyle = isFilled ? 'filled-star' : 'empty-star';
-    return `<span class="star ${starStyle}">&#9733;</span>`;
-  }).join("");
-    }
+  let starsHTML = "";
+  for (let i = 0; i < totalStars; i++) {
+    const isFilled = i < filledStars;
+    starsHTML += `<span class="star ${isFilled ? 'filled-star' : 'empty-star'}">&#9733;</span>`;
+  }
+
+  return starsHTML;
+}
 }
 
