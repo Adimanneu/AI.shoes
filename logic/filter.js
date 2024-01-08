@@ -19,6 +19,7 @@ function priceFilter(arrayOfShoes, minPrice, maxPrice) {
 
 function filterShoes() {
     document.addEventListener("DOMContentLoaded", function () {
+        // IDn för alla olika skor
         const SLIPPERS_TYPE_ID = 1;
         const BOOTS_TYPE_ID = 2;
         const SNEAKERS_TYPE_ID = 3;
@@ -35,7 +36,6 @@ function filterShoes() {
         const franceCheckbox = document.getElementById("franceCheckbox");
         const italyCheckbox = document.getElementById("italyCheckbox");
         const japanCheckbox = document.getElementById("japanCheckbox");
-
 
         slippersCheckbox.addEventListener("change", updateShoeListHandler);
         bootsCheckbox.addEventListener("change", updateShoeListHandler);
