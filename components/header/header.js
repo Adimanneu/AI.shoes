@@ -1,3 +1,14 @@
+function clearAllFilters() {
+    // Your implementation to clear filters goes here
+    const checkboxes = document.querySelectorAll('.input-box');
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+
+    const maxPriceInput = document.querySelector('.input-price');
+    maxPriceInput.value = '';
+
+    // Trigger updateShoeListHandler to apply filters
+    updateShoeListHandler();
+}
 function render_header(parent) {
 
     const header = document.createElement("div");
@@ -57,6 +68,7 @@ function f1(event) {
     let underline_boots = document.querySelector(".boots");
     underline_boots.classList.toggle("selected");
 
+    clearAllFilters();
 }
 
 function f2(event) {
@@ -74,6 +86,8 @@ function f2(event) {
 
     let underline_sneakers = document.querySelector(".sneakers");
     underline_sneakers.classList.toggle("selected");
+
+    clearAllFilters();
 }
 
 function f3(event) {
@@ -90,6 +104,8 @@ function f3(event) {
 
     let underline_slippers = document.querySelector(".slippers");
     underline_slippers.classList.toggle("selected");
+
+    clearAllFilters();
 }
 
 function f4(event) {
@@ -105,6 +121,8 @@ function f4(event) {
 
     let underline_all = document.querySelector(".all");
     underline_all.classList.toggle("selected");
+
+    clearAllFilters();
 }
 
 function f5(event) {
