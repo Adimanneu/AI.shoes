@@ -18,10 +18,7 @@ function priceFilter(arrayOfShoes, minPrice, maxPrice) {
 }
 
 function filterShoes() {
-
-
     document.addEventListener("DOMContentLoaded", function () {
-
         // IDn för alla olika skor
         const SLIPPERS_TYPE_ID = 1;
         const BOOTS_TYPE_ID = 2;
@@ -29,38 +26,78 @@ function filterShoes() {
 
         const slippersCheckbox = document.getElementById("slippersCheckbox");
         const bootsCheckbox = document.getElementById("bootsCheckbox");
-        const sneakersCheckbox = document.getElementById("sneakersCheckbox")
+        const sneakersCheckbox = document.getElementById("sneakersCheckbox");
 
-        // Event listener för om checkboxen blivit klickad
+        const swedenCheckbox = document.getElementById("swedenCheckbox");
+        const spainCheckbox = document.getElementById("spainCheckbox");
+        const germanyCheckbox = document.getElementById("germanyCheckbox");
+        const usaCheckbox = document.getElementById("usaCheckbox");
+        const ukCheckbox = document.getElementById("ukCheckbox");
+        const franceCheckbox = document.getElementById("franceCheckbox");
+        const italyCheckbox = document.getElementById("italyCheckbox");
+        const japanCheckbox = document.getElementById("japanCheckbox");
+
         slippersCheckbox.addEventListener("change", updateShoeListHandler);
-
-
         bootsCheckbox.addEventListener("change", updateShoeListHandler);
-
-
         sneakersCheckbox.addEventListener("change", updateShoeListHandler);
+
+        swedenCheckbox.addEventListener("change", updateShoeListHandler);
+        spainCheckbox.addEventListener("change", updateShoeListHandler);
+        germanyCheckbox.addEventListener("change", updateShoeListHandler);
+        usaCheckbox.addEventListener("change", updateShoeListHandler);
+        ukCheckbox.addEventListener("change", updateShoeListHandler);
+        franceCheckbox.addEventListener("change", updateShoeListHandler);
+        italyCheckbox.addEventListener("change", updateShoeListHandler);
+        japanCheckbox.addEventListener("change", updateShoeListHandler);
+
+
+        // Funktion för att uppdatera skolistan baserat på valda filter
         function updateShoeListHandler() {
-            // Skapa en array av alla checkboxar som är valda
-            const checkedTypes = [];
+            const checkedCountries = [];
+            const checkedKinds = [];
+
             if (slippersCheckbox.checked) {
-                checkedTypes.push(SLIPPERS_TYPE_ID);
+                checkedKinds.push(SLIPPERS_TYPE_ID);
             }
             if (bootsCheckbox.checked) {
-                checkedTypes.push(BOOTS_TYPE_ID);
+                checkedKinds.push(BOOTS_TYPE_ID);
             }
-
             if (sneakersCheckbox.checked) {
-                checkedTypes.push(SNEAKERS_TYPE_ID);
+                checkedKinds.push(SNEAKERS_TYPE_ID);
+            }
+            if (swedenCheckbox.checked) {
+                checkedCountries.push(1);
+            }
+            if (spainCheckbox.checked) {
+                checkedCountries.push(2);
+            }
+            if (germanyCheckbox.checked) {
+                checkedCountries.push(3);
+            }
+            if (usaCheckbox.checked) {
+                checkedCountries.push(4);
+            }
+            if (ukCheckbox.checked) {
+                checkedCountries.push(5);
+            }
+            if (franceCheckbox.checked) {
+                checkedCountries.push(6);
+            }
+            if (italyCheckbox.checked) {
+                checkedCountries.push(7);
+            }
+            if (japanCheckbox.checked) {
+                checkedCountries.push(8);
             }
 
-            if (checkedTypes.length > 0) {
-                // Om minst ett filter valts, visa en ny array av de filtrerade skorna
+            if (checkedCountries.length > 0 || checkedKinds.length > 0) {
                 const filteredShoes = array_filter(SHOES, function (shoe) {
-                    return checkedTypes.includes(shoe.kind_id);
+                    const countryMatch = checkedCountries.length === 0 || checkedCountries.includes(shoe.country_id);
+                    const kindMatch = checkedKinds.length === 0 || checkedKinds.includes(shoe.kind_id);
+                    return countryMatch && kindMatch;
                 });
                 updateShoeList(filteredShoes);
             } else {
-                // Om inga filter är valda, visa alla skor
                 updateShoeList(SHOES);
             }
         }
