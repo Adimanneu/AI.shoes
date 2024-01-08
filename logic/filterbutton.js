@@ -38,10 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div>
             <h3> Made In</h3>
-            <label for="Spain"><input id="Spain" class="input-box" type="checkbox">Spain </label>
-            <label for="Portugal"><input id="Portugal" class="input-box" type="checkbox"> Portugal </label><br>
-            <label for="Kingdom"><input id="Kingdom" class="input-box" type="checkbox">United Kingdom </label><br>
-            <label for="Sweden"><input id="Sweden" class="input-box" type="checkbox">Sweden </label>
+
+            <input type="checkbox" id="swedenCheckbox" class="input-box" name="Sweden">
+            <label for="Sweden">SWEDEN</label> 
+            <input type="checkbox" id="spainCheckbox" class="input-box" name="Spain">
+            <label for="Spain">SPAIN</label>
+            <input type="checkbox" id="germanyCheckbox" class="input-box" name="Germany">
+            <label for="Germany">GERMANY</label>
+            <input type="checkbox" id="usaCheckbox" class="input-box" name="USA">
+            <label for="USA">USA</label>
+            <input type="checkbox" id="ukCheckbox" class="input-box" name="UK">
+            <label for="UK">UNITED KINGDOM</label>
+            <input type="checkbox" id="franceCheckbox" class="input-box" name="France">
+            <label for="France">FRANCE</label>
+            <input type="checkbox" id="italyCheckbox" class="input-box" name="Italy">
+            <label for="Italy">ITALY</label>
+            <input type="checkbox" id="japanCheckbox" class="input-box" name="Japan">
+            <label for="Japan">JAPAN</label>
+
           </div>
           <button class="apply-filter-button">Apply Filter</button>
           </div>
