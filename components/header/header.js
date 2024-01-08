@@ -1,12 +1,10 @@
 function clearAllFilters() {
-    // Your implementation to clear filters goes here
     const checkboxes = document.querySelectorAll('.input-box');
     checkboxes.forEach(checkbox => checkbox.checked = false);
 
     const maxPriceInput = document.querySelector('.input-price');
     maxPriceInput.value = '';
 
-    // Trigger updateShoeListHandler to apply filters
     updateShoeListHandler();
 }
 function render_header(parent) {
