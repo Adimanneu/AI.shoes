@@ -18,13 +18,13 @@ function priceFilter(arrayOfShoes, minPrice, maxPrice) {
 }
 
 function filterShoes() {
-    
-    
-        document.addEventListener("DOMContentLoaded", function () {
+
+
+    document.addEventListener("DOMContentLoaded", function () {
 
         // IDn för alla olika skor
         const SLIPPERS_TYPE_ID = 1;
-        const BOOTS_TYPE_ID = 2; 
+        const BOOTS_TYPE_ID = 2;
         const SNEAKERS_TYPE_ID = 3;
 
         const slippersCheckbox = document.getElementById("slippersCheckbox");
@@ -34,7 +34,7 @@ function filterShoes() {
         // Event listener för om checkboxen blivit klickad
         slippersCheckbox.addEventListener("change", updateShoeListHandler);
 
-        
+
         bootsCheckbox.addEventListener("change", updateShoeListHandler);
 
 
@@ -66,4 +66,3 @@ function filterShoes() {
         }
     });
 }
-
