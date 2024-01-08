@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <h3> Max price </h3>
             <p> Up to: <input type="text" class="input-price"> KR </p>
           </div>
+          <div>
+            <button class="clear-filters-button">Clear Filters</button>
+          </div>
         </div>
       </div>`;
 
@@ -75,7 +78,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   const maxPriceInput = filterPopup.querySelector('.input-price');
+  const clearFiltersButton = filterPopup.querySelector('.clear-filters-button');
   maxPriceInput.addEventListener("input", updateShoeListHandler);
+  clearFiltersButton.addEventListener("click", clearAllFilters);
+
+  function clearAllFilters() {
+    // Uncheck all checkboxes
+    const checkboxes = filterPopup.querySelectorAll('.input-box');
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+
+    // Clear max price input
+    maxPriceInput.value = '';
+
+    // Trigger updateShoeListHandler to apply filters
+    updateShoeListHandler();
+  }
 
   function updateShoeListHandler() {
     const checkedCountries = [];

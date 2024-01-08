@@ -99,8 +99,9 @@
     cursor: pointer;
 }
 
-.apply-filter-button {
-    height: 50px;
-    width: 100px;
-    font-size: 15px;
+.clear-filters-button {
+    margin-top: 1vw;
+    height: 75px;
+    width: 150px;
+    font-size: 20px;
 }
